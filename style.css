@@ -1,0 +1,206 @@
+:root {
+  font-family: "Sora", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.page-container {
+  display: flex;
+  padding: 3%;
+  gap: 4rem;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #f6bf43 ;/* Colores del círculo */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to bottom,#fff, #ffeb8e, #f0a233,#ff9500); /* Degradado de la estrella */
+  clip-path: polygon(
+    50% 0%, 
+    61% 35%, 
+    98% 35%, 
+    68% 57%, 
+    79% 91%, 
+    50% 70%, 
+    21% 91%, 
+    32% 57%, 
+    2% 35%, 
+    39% 35%
+  ); /* Forma de la estrella */
+
+  /* Relieve en la estrella */
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2),   /* Sombra interna */
+    inset -2px -2px 4px rgba(255, 255, 255, 0.7), /* Luz interna */
+    0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra externa */
+}
+
+
+.reviewers-text-description {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  margin-top: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.reviews-text {
+  text-align: start;
+  max-width: 49%;
+}
+
+.reviews-text h1 {
+  font-size: 36px;
+}
+
+.reviews-checkList ul {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.list-text {
+  margin: 0;
+}
+
+
+.listItem {
+  display: flex;
+  gap: 12px;
+  margin: 0.7rem 0 0 0;
+}
+
+.people-reviews {
+  width: 51%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between  ;
+}
+
+.row-review-top {
+  display: flex;
+  justify-content: end;
+}
+
+.card {
+  padding: 30px;
+  text-align: start;
+  background: #ffffff;
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-img img {
+  width: 20px;
+  height: 20px;
+}
+
+.logo {
+  width: 70px !important;
+  height: initial !important;
+  padding-right: 8px;
+}
+
+.reviwer-name,
+.review {
+  font-size: 16px;
+}
+
+.reviewer-name {
+  font-weight: 700;
+}
+
+.review {
+  margin-bottom: 0;
+  padding-right: 20px;
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 1025px) {
+  .page-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .reviews-text,
+  .people-reviews {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .people-reviews {
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .row-review-top {
+    padding-left: 350px;
+  }
+
+  .row-review-bottom {
+    padding-right: 150px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .page-container {
+    padding: 0;
+  }
+
+  #app {
+    padding: 1rem;
+  }
+
+  .row-review-top,
+  .row-review-bottom {
+    padding: 0;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
+
